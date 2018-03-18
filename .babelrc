@@ -1,0 +1,12 @@
+{
+    "presets": [
+        ["babel-preset-env", {
+            "targets": {
+                "firefox": 59,
+                "chrome": 65
+            },
+            "modules": false
+        }],
+        "babel-preset-flow", "babel-preset-react"
+    ]
+}

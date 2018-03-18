@@ -1,0 +1,18 @@
+language: node_js
+
+node_js:
+  - "8"
+
+install:
+- travis_retry npm install
+- npm run build
+
+script:
+  - npm run test
+
+deploy:
+    provider: script
+    skip_cleanup: true # So it keeps npm_modules
+    script: npx semantic-release
+    on:
+        branch: master
