@@ -1,6 +1,6 @@
 {
   "name": "react-golden-layout",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A React wrapper around GoldenLayout.",
   "main": "dist/index.js",
   "homepage": "https://github.com/Slowki/react-golden-layout#readme",
@@ -16,7 +16,7 @@
     "test": "flow",
     "build": "babel src --out-dir dist",
     "build:watch": "npm run build -- -w",
-    "prepublishOnly": "npm run clean && npm run build && documentation readme 'src/**' --infer-private --section=API",
+    "prepublishOnly": "npm run clean && npm run build && documentation build 'src/**' -f html --infer-private -o docs",
     "postinstall": "npm run git:setup",
     "git:validate-commit": "commitlint -x @commitlint/config-conventional",
     "git:setup": "bash -c \"F='.git/hooks/commit-msg'; if [ ! -e \\$F ]; then echo 'cat \\$1 | npm run git:validate-commit' > \\$F; chmod +x \\$F; fi\""

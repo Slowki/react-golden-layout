@@ -1,0 +1,1112 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>react-golden-layout 1.0.4 | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+  <link href='assets/split.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>react-golden-layout</h3>
+          <div class='mb1'><code>1.0.4</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#column'
+                  class="">
+                  Column
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#contentitemprops'
+                  class="">
+                  ContentItemProps
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#contentitem'
+                  class="">
+                  ContentItem
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#creategoldenlayoutcomponent'
+                  class="">
+                  createGoldenLayoutComponent
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#goldenlayoutcomponentprops'
+                  class="">
+                  GoldenLayoutComponentProps
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#goldenlayoutcomponent'
+                  class="">
+                  GoldenLayoutComponent
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#row'
+                  class="">
+                  Row
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#stackprops'
+                  class="">
+                  StackProps
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#stack'
+                  class="">
+                  Stack
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#goldenlayoutitem'
+                  class="">
+                  GoldenLayoutItem
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#goldenlayoutheader'
+                  class="">
+                  GoldenLayoutHeader
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#reactpurecomponent'
+                  class="">
+                  React.PureComponent
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#reactcomponent'
+                  class="">
+                  React.Component
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#goldenlayout'
+                  class="">
+                  GoldenLayout
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='column'>
+      Column
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Create a new column</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Column(props: <a href="#contentitemprops">ContentItemProps</a>): any</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(<a href="#contentitemprops">ContentItemProps</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='contentitemprops'>
+      ContentItemProps
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>React properties for the <a href="#contentitem">ContentItem</a> component.</p>
+
+
+  <div class='pre p1 fill-light mt0'>ContentItemProps</div>
+  
+    <p>
+      Type:
+      {type: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, children: ChildrenArray&#x3C;any>, itemRef: function (<a href="#goldenlayoutitem">GoldenLayoutItem</a>): any?}
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>type</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>children</span> <code class='quiet'>(ChildrenArray&#x3C;any>)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>itemRef</span> <code class='quiet'>(function (<a href="#goldenlayoutitem">GoldenLayoutItem</a>): any?)</code>
+          
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='contentitem'>
+      ContentItem
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Create a new GoldenLayout ContentItem.</p>
+<p>Note: You probably don't want to use this class directly, see:</p>
+<ul>
+<li><a href="#row">Row</a></li>
+<li><a href="#column">Column</a></li>
+<li><a href="#stack">Stack</a></li>
+</ul>
+
+
+  <div class='pre p1 fill-light mt0'>new ContentItem(props: <a href="#contentitemprops">ContentItemProps</a>)</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#reactcomponent">React.Component</a>
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(<a href="#contentitemprops">ContentItemProps</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='creategoldenlayoutcomponent'>
+      createGoldenLayoutComponent
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Convert a React Component's constructor to a GoldenLayout React Component.</p>
+
+
+  <div class='pre p1 fill-light mt0'>createGoldenLayoutComponent(Component: ComponentBuilder, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): GLReactItem&#x3C;ComponentBuilder></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>Component</span> <code class='quiet'>(ComponentBuilder)</code>
+	    The constructor for the React Component
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    See 
+<a href="https://golden-layout.com/docs/ItemConfig.html">GoldenLayout's Documentation</a>
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>GLReactItem&#x3C;ComponentBuilder></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='goldenlayoutcomponentprops'>
+      GoldenLayoutComponentProps
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>React properties for the <a href="#goldenlayoutcomponent">GoldenLayoutComponent</a> component.</p>
+
+
+  <div class='pre p1 fill-light mt0'>GoldenLayoutComponentProps</div>
+  
+    <p>
+      Type:
+      {children: ChildrenArray&#x3C;any>, className: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?, goldenLayoutRef: function (<a href="#goldenlayout">GoldenLayout</a>): any?}
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>children</span> <code class='quiet'>(ChildrenArray&#x3C;any>)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>className</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>goldenLayoutRef</span> <code class='quiet'>(function (<a href="#goldenlayout">GoldenLayout</a>): any?)</code>
+          
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='goldenlayoutcomponent'>
+      GoldenLayoutComponent
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Create a GoldenLayout instance</p>
+
+
+  <div class='pre p1 fill-light mt0'>new GoldenLayoutComponent(props: <a href="#goldenlayoutcomponentprops">GoldenLayoutComponentProps</a>)</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#reactpurecomponent">React.PureComponent</a>
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(<a href="#goldenlayoutcomponentprops">GoldenLayoutComponentProps</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">import</span> <span class="hljs-string">'golden-layout/src/css/goldenlayout-base.css'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'golden-layout/src/css/goldenlayout-dark-theme.css'</span>;
+<span class="hljs-keyword">import</span> GoldenLayout, { Row, Stack, createGoldenLayoutComponent } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-golden-layout'</span>;
+...
+&lt;GoldenLayout&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Row</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Stack</span>&gt;</span>
+            {
+              // To apply properties to a React component, use createGoldenLayoutComponent
+            }
+            {createGoldenLayoutComponent(Foo, { isClosable: false, title: "Foo's Title" })}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Stack</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Stack</span>&gt;</span>
+            {
+              // If you don't want any special settings you can just pass
+              // React components directly.
+            }
+            {Bar}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Stack</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Row</span>&gt;</span></span>
+&lt;<span class="hljs-regexp">/GoldenLayout&gt;</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='row'>
+      Row
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Create a new Row</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Row(props: <a href="#contentitemprops">ContentItemProps</a>): any</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(<a href="#contentitemprops">ContentItemProps</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='stackprops'>
+      StackProps
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>React properties for the <a href="#stack">Stack</a> component.</p>
+
+
+  <div class='pre p1 fill-light mt0'>StackProps</div>
+  
+    <p>
+      Type:
+      {children: ChildrenArray&#x3C;any>, itemRef: function (<a href="#goldenlayoutitem">GoldenLayoutItem</a>): any?, headerRef: function (<a href="#goldenlayoutheader">GoldenLayoutHeader</a>): any?, headerPosition: (<code>false</code> | <code>"top"</code> | <code>"left"</code> | <code>"right"</code> | <code>"bottom"</code>)?, showPopoutIcon: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?, showMaximiseIcon: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?, showCloseIcon: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?}
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>children</span> <code class='quiet'>(ChildrenArray&#x3C;any>)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>itemRef</span> <code class='quiet'>(function (<a href="#goldenlayoutitem">GoldenLayoutItem</a>): any?)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>headerRef</span> <code class='quiet'>(function (<a href="#goldenlayoutheader">GoldenLayoutHeader</a>): any?)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>headerPosition</span> <code class='quiet'>((<code>false</code> | <code>"top"</code> | <code>"left"</code> | <code>"right"</code> | <code>"bottom"</code>)?)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>showPopoutIcon</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>showMaximiseIcon</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>showCloseIcon</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='stack'>
+      Stack
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Create a new Stack</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Stack(props: <a href="#stackprops">StackProps</a>): any</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>props</span> <code class='quiet'>(<a href="#stackprops">StackProps</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='goldenlayoutitem'>
+      GoldenLayoutItem
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A GoldenLayout Item, see <a href="http://golden-layout.com/docs/Item.html">GoldenLayout's documentation</a>.</p>
+
+
+  <div class='pre p1 fill-light mt0'>GoldenLayoutItem</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='goldenlayoutheader'>
+      GoldenLayoutHeader
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A GoldenLayout Header object, see <a href="http://golden-layout.com/docs/Header.html">GoldenLayout's documentation</a>.</p>
+
+
+  <div class='pre p1 fill-light mt0'>GoldenLayoutHeader</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='reactpurecomponent'>
+      React.PureComponent
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A <a href="https://reactjs.org/docs/react-api.html#reactpurecomponent">React component</a></p>
+
+
+  <div class='pre p1 fill-light mt0'>React.PureComponent</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='reactcomponent'>
+      React.Component
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A <a href="https://reactjs.org/docs/react-api.html#reactcomponent">React component</a></p>
+
+
+  <div class='pre p1 fill-light mt0'>React.Component</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='goldenlayout'>
+      GoldenLayout
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A GoldenLayout instance, see <a href="https://golden-layout.com/docs/GoldenLayout.html">GoldenLayout's documentation</a>.</p>
+
+
+  <div class='pre p1 fill-light mt0'>GoldenLayout</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
