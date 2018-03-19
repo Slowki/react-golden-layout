@@ -21,81 +21,14 @@ new webpack.ProvidePlugin({
 
 #### Table of Contents
 
--   [markAsGLComponent](#markasglcomponent)
--   [Context](#context)
--   [isGLComponent](#isglcomponent)
--   [createGoldenLayoutComponent](#creategoldenlayoutcomponent)
--   [createGoldenLayoutComponent](#creategoldenlayoutcomponent-1)
 -   [Column](#column)
--   [Column](#column-1)
--   [StackProps](#stackprops)
--   [Row](#row)
--   [Row](#row-1)
--   [GoldenLayoutComponentProps](#goldenlayoutcomponentprops)
--   [Stack](#stack)
--   [Stack](#stack-1)
--   [default](#default)
--   [GoldenLayoutItem](#goldenlayoutitem)
--   [GoldenLayoutComponent](#goldenlayoutcomponent)
-    -   [componentWillUnmount](#componentwillunmount)
-    -   [componentWillUnmount](#componentwillunmount-1)
-    -   [render](#render)
-    -   [render](#render-1)
-    -   [\_\_gotDiv](#__gotdiv)
-    -   [\_\_gotDiv](#__gotdiv-1)
 -   [ContentItemProps](#contentitemprops)
 -   [ContentItem](#contentitem)
-    -   [id](#id)
-    -   [id](#id-1)
-    -   [componentWillUnmount](#componentwillunmount-2)
-    -   [componentWillUnmount](#componentwillunmount-3)
-    -   [render](#render-2)
-    -   [render](#render-3)
-    -   [\_\_addItem](#__additem)
-    -   [\_\_addItem](#__additem-1)
--   [ContentItem](#contentitem-1)
-    -   [id](#id-2)
-    -   [id](#id-3)
-    -   [componentWillUnmount](#componentwillunmount-4)
-    -   [componentWillUnmount](#componentwillunmount-5)
-    -   [render](#render-4)
-    -   [render](#render-5)
-    -   [\_\_addItem](#__additem-2)
-    -   [\_\_addItem](#__additem-3)
-
-### markAsGLComponent
-
-**Parameters**
-
--   `Component` **any** 
-
-### Context
-
-### isGLComponent
-
-**Parameters**
-
--   `Component` **any** 
-
-Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
-
-### createGoldenLayoutComponent
-
-**Parameters**
-
--   `Component` **ComponentBuilder** 
--   `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
-
-Returns **GLReactItem&lt;ComponentBuilder>** 
-
-### createGoldenLayoutComponent
-
-**Parameters**
-
--   `Component` **ComponentBuilder** 
--   `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
-
-Returns **GLReactItem&lt;ComponentBuilder>** 
+-   [GoldenLayoutComponentProps](#goldenlayoutcomponentprops)
+-   [GoldenLayoutComponent](#goldenlayoutcomponent)
+-   [Row](#row)
+-   [StackProps](#stackprops)
+-   [Stack](#stack)
 
 ### Column
 
@@ -107,51 +40,29 @@ Create a new column
 
 Returns **any** 
 
-### Column
+### ContentItemProps
 
-Create a new column
+ContentItem's React props
 
-**Parameters**
-
--   `props` **[ContentItemProps](#contentitemprops)** 
-
-Returns **any** 
-
-### StackProps
-
-Properties for the `Stack` element
-
-Type: {children: ChildrenArray&lt;any>, itemRef: function ([Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)): any?, headerRef: function ([Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)): any?, headerPosition: (`false` \| `"top"` \| `"left"` \| `"right"` \| `"bottom"`)?, showPopoutIcon: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?, showMaximiseIcon: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?, showCloseIcon: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?}
+Type: {type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String), children: ChildrenArray&lt;any>, itemRef: function (GoldenLayoutItem): any?}
 
 **Properties**
 
+-   `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `children` **ChildrenArray&lt;any>** 
--   `itemRef` **function ([Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)): any?** 
--   `headerRef` **function ([Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)): any?** 
--   `headerPosition` **(`false` \| `"top"` \| `"left"` \| `"right"` \| `"bottom"`)?** 
--   `showPopoutIcon` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
--   `showMaximiseIcon` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
--   `showCloseIcon` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
+-   `itemRef` **function (GoldenLayoutItem): any?** 
 
-### Row
+### ContentItem
 
-Create a new Row
+**Extends React.Component**
 
-**Parameters**
+Create a new GoldenLayout ContentItem.
 
--   `props` **[ContentItemProps](#contentitemprops)** 
-
-Returns **any** 
-
-### Row
-
-Create a new Row
+Note: You probably don't want to use this class directly.
 
 **Parameters**
 
 -   `props` **[ContentItemProps](#contentitemprops)** 
-
-Returns **any** 
 
 ### GoldenLayoutComponentProps
 
@@ -164,55 +75,6 @@ Type: {children: ChildrenArray&lt;any>, className: [string](https://developer.mo
 -   `children` **ChildrenArray&lt;any>** 
 -   `className` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
 -   `goldenLayoutRef` **function (GoldenLayout): any?** 
-
-### Stack
-
-Create a new Stack
-
-**Parameters**
-
--   `props` **[StackProps](#stackprops)** 
-
-Returns **any** 
-
-### Stack
-
-Create a new Stack
-
-**Parameters**
-
--   `props` **[StackProps](#stackprops)** 
-
-Returns **any** 
-
-### default
-
-**Extends React.PureComponent**
-
-Create a GoldenLayout instance
-
-**Parameters**
-
--   `props` **[GoldenLayoutComponentProps](#goldenlayoutcomponentprops)** 
-
-**Examples**
-
-```javascript
-<GoldenLayout className="golden-layout-holder">
-    <Row>
-        <Stack>
-            {createGoldenLayoutComponent(Foo, { isClosable: false })}
-        </Stack>
-        <Stack>
-            {Bar}
-        </Stack>
-    </Row>
-</GoldenLayout>
-```
-
-### GoldenLayoutItem
-
-Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
 ### GoldenLayoutComponent
 
@@ -239,121 +101,41 @@ Create a GoldenLayout instance
 </GoldenLayout>
 ```
 
-#### componentWillUnmount
+### Row
 
-#### componentWillUnmount
-
-#### render
-
-#### render
-
-#### \_\_gotDiv
+Create a new Row
 
 **Parameters**
 
--   `div` **[HTMLElement](https://developer.mozilla.org/docs/Web/HTML/Element)?** 
+-   `props` **[ContentItemProps](#contentitemprops)** 
 
-#### \_\_gotDiv
+Returns **any** 
 
-**Parameters**
+### StackProps
 
--   `div` **[HTMLElement](https://developer.mozilla.org/docs/Web/HTML/Element)?** 
+Properties for the `Stack` element
 
-### ContentItemProps
-
-ContentItem's React props
-
-Type: {type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String), children: ChildrenArray&lt;any>, itemRef: function ([GoldenLayoutItem](#goldenlayoutitem)): any?}
+Type: {children: ChildrenArray&lt;any>, itemRef: function ([Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)): any?, headerRef: function ([Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)): any?, headerPosition: (`false` \| `"top"` \| `"left"` \| `"right"` \| `"bottom"`)?, showPopoutIcon: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?, showMaximiseIcon: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?, showCloseIcon: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?}
 
 **Properties**
 
--   `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `children` **ChildrenArray&lt;any>** 
--   `itemRef` **function ([GoldenLayoutItem](#goldenlayoutitem)): any?** 
+-   `itemRef` **function ([Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)): any?** 
+-   `headerRef` **function ([Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)): any?** 
+-   `headerPosition` **(`false` \| `"top"` \| `"left"` \| `"right"` \| `"bottom"`)?** 
+-   `showPopoutIcon` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
+-   `showMaximiseIcon` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
+-   `showCloseIcon` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
 
-### ContentItem
+### Stack
 
-**Extends React.Component**
-
-Create a new GoldenLayout ContentItem.
-
-Note: You probably don't want to use this class directly.
-
-**Parameters**
-
--   `props` **[ContentItemProps](#contentitemprops)** 
-
-#### id
-
-Type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)
-
-#### id
-
-Type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)
-
-#### componentWillUnmount
-
-#### componentWillUnmount
-
-#### render
-
-#### render
-
-#### \_\_addItem
+Create a new Stack
 
 **Parameters**
 
--   `parentItem` **any** 
--   `components` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
+-   `props` **[StackProps](#stackprops)** 
 
-#### \_\_addItem
-
-**Parameters**
-
--   `parentItem` **any** 
--   `components` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
-
-### ContentItem
-
-**Extends React.Component**
-
-Create a new GoldenLayout ContentItem.
-
-Note: You probably don't want to use this class directly.
-
-**Parameters**
-
--   `props` **[ContentItemProps](#contentitemprops)** 
-
-#### id
-
-Type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)
-
-#### id
-
-Type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)
-
-#### componentWillUnmount
-
-#### componentWillUnmount
-
-#### render
-
-#### render
-
-#### \_\_addItem
-
-**Parameters**
-
--   `parentItem` **any** 
--   `components` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
-
-#### \_\_addItem
-
-**Parameters**
-
--   `parentItem` **any** 
--   `components` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
+Returns **any** 
 
 ## Acknowledgments
 
