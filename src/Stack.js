@@ -1,10 +1,10 @@
 // @flow
 import ContentItem, { type ContentItemProps } from './ContentItem';
 import { markAsGLComponent } from './internal/GLComponentRegistry';
-import type { GoldenLayoutItem, GoldenLayoutHeader } from './types';
+import type { GoldenLayoutItem, GoldenLayoutHeader } from './Types';
 
 import React from 'react';
-import type { ElementProps } from 'react';
+import type { ChildrenArray } from 'react';
 
 /**
  * React properties for the {@link Stack} component.
@@ -34,7 +34,7 @@ export default function Stack(props : StackProps) : * {
             item.header.position(props.headerPosition);
 
         if (props.showPopoutIcon !== undefined) {
-            showHideIcon(item.header, 'popout', props.showMaximiseIcon);
+            showHideIcon(item.header, 'popout', props.showPopoutIcon);
         }
         
         if (props.showMaximiseIcon !== undefined) {
@@ -42,7 +42,7 @@ export default function Stack(props : StackProps) : * {
         }
 
         if (props.showCloseIcon !== undefined) {
-            showHideIcon(item.header, 'close', props.showMaximiseIcon);
+            showHideIcon(item.header, 'close', props.showCloseIcon);
         }
 
         if (props.itemRef)
