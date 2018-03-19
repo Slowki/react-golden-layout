@@ -10,10 +10,13 @@ type GoldenLayoutComponentState = {|
     goldenLayoutResizer : ?Function;
 |};
 
-type GoldenLayoutComponentProps = {|
+/**
+ * GoldenLayoutComponent's React props
+ */
+export type GoldenLayoutComponentProps = {|
     children: ChildrenArray<any>;
     className?: string;
-    ref?: (GoldenLayout) => mixed;
+    goldenLayoutRef?: (GoldenLayout) => mixed;
 |};
 
 /**
@@ -63,8 +66,6 @@ export default class GoldenLayoutComponent extends React.PureComponent<GoldenLay
             layout.on('initialised', () => {
                 if (this.state.goldenLayout === layout) return;
 
-                window.layout = layout; //DEBUG
-
                 const goldenLayoutResizer = () => {
                     layout.updateSize();
                 };
@@ -74,10 +75,9 @@ export default class GoldenLayoutComponent extends React.PureComponent<GoldenLay
                     goldenLayout: layout,
                     goldenLayoutResizer
                 });
+                if (this.props.goldenLayoutRef)
+                    this.props.goldenLayoutRef(layout);
             });
-        } else if (!div && this.state.goldenLayout) {
-            // window.removeEventListener('resize', this.state.goldenLayoutResizer);
-            // this.state.goldenLayout.destroy();
         }
     }
 };
