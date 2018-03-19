@@ -3,12 +3,29 @@
 ### Table of Contents
 
 -   [GoldenLayoutComponent][1]
--   [Row][2]
--   [Column][3]
--   [Stack][4]
--   [ContentItem][5]
+-   [GoldenLayoutComponent][2]
+-   [Row][3]
+-   [Column][4]
+-   [showHideIcon][5]
+-   [Stack][6]
+-   [ContentItem][7]
+-   [ContentItem][8]
 
 ## GoldenLayoutComponent
+
+[dist/GoldenLayout.js:26-76][9]
+
+**Extends React.PureComponent**
+
+GoldenLayoutComponent's React props
+
+**Parameters**
+
+-   `props`  
+
+## GoldenLayoutComponent
+
+[dist/GoldenLayout.js:26-76][9]
 
 **Extends React.PureComponent**
 
@@ -35,6 +52,8 @@ Create a GoldenLayout instance
 
 ## Row
 
+[dist/Row.js:12-14][10]
+
 Create a new Row
 
 **Parameters**
@@ -43,13 +62,29 @@ Create a new Row
 
 ## Column
 
+[dist/Column.js:11-13][11]
+
 Create a new column
 
 **Parameters**
 
 -   `props`  
 
+## showHideIcon
+
+[dist/Stack.js:11-14][12]
+
+Properties for the `Stack` element
+
+**Parameters**
+
+-   `header`  
+-   `name`  
+-   `value`  
+
 ## Stack
+
+[dist/Stack.js:20-40][13]
 
 Create a new Stack
 
@@ -59,11 +94,25 @@ Create a new Stack
 
 ## ContentItem
 
+[dist/ContentItem.js:44-112][14]
+
+**Extends React.Component**
+
+ContentItem's React props
+
+**Parameters**
+
+-   `props`  
+
+## ContentItem
+
+[dist/ContentItem.js:44-112][14]
+
 **Extends React.Component**
 
 Create a new GoldenLayout ContentItem.
 
-Note: You probably don't want to use this class directly/
+Note: You probably don't want to use this class directly.
 
 **Parameters**
 
@@ -71,10 +120,28 @@ Note: You probably don't want to use this class directly/
 
 [1]: #goldenlayoutcomponent
 
-[2]: #row
+[2]: #goldenlayoutcomponent-1
 
-[3]: #column
+[3]: #row
 
-[4]: #stack
+[4]: #column
 
-[5]: #contentitem
+[5]: #showhideicon
+
+[6]: #stack
+
+[7]: #contentitem
+
+[8]: #contentitem-1
+
+[9]: https://github.com/Slowki/react-golden-layout/blob/23edcb01d98cde8033ceece4a67951c07949f3dc/dist/GoldenLayout.js#L26-L76 "Source code on GitHub"
+
+[10]: https://github.com/Slowki/react-golden-layout/blob/23edcb01d98cde8033ceece4a67951c07949f3dc/dist/Row.js#L12-L14 "Source code on GitHub"
+
+[11]: https://github.com/Slowki/react-golden-layout/blob/23edcb01d98cde8033ceece4a67951c07949f3dc/dist/Column.js#L11-L13 "Source code on GitHub"
+
+[12]: https://github.com/Slowki/react-golden-layout/blob/23edcb01d98cde8033ceece4a67951c07949f3dc/dist/Stack.js#L11-L14 "Source code on GitHub"
+
+[13]: https://github.com/Slowki/react-golden-layout/blob/23edcb01d98cde8033ceece4a67951c07949f3dc/dist/Stack.js#L20-L40 "Source code on GitHub"
+
+[14]: https://github.com/Slowki/react-golden-layout/blob/23edcb01d98cde8033ceece4a67951c07949f3dc/dist/ContentItem.js#L44-L112 "Source code on GitHub"
