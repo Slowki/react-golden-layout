@@ -1,17 +1,18 @@
 // @flow
 import ContentItem, { type ContentItemProps } from './ContentItem';
 import { markAsGLComponent } from './internal/GLComponentRegistry';
+import type { GoldenLayoutItem, GoldenLayoutHeader } from './types';
 
 import React from 'react';
 import type { ElementProps } from 'react';
 
 /**
- * Properties for the `Stack` element
+ * React properties for the {@link Stack} component.
  */
 export type StackProps = {|
     children: ChildrenArray<any>;
-    itemRef?: (Object) => mixed;
-    headerRef?: (Object) => mixed;
+    itemRef?: (GoldenLayoutItem) => mixed;
+    headerRef?: (GoldenLayoutHeader) => mixed;
     headerPosition?: false | 'top' | 'left' | 'right' | 'bottom';
     showPopoutIcon?: boolean;
     showMaximiseIcon?: boolean;

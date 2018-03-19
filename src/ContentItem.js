@@ -1,6 +1,7 @@
 // @flow
 import Context from './Context';
 import { markAsGLComponent, isGLComponent } from './internal/GLComponentRegistry';
+import type { GoldenLayoutItem } from './types';
 
 import React from 'react';
 import type { ChildrenArray } from 'react';
@@ -33,14 +34,12 @@ function createReactContentItem(parentItem : any, component : any) {
 }
 
 
-export type GoldenLayoutItem = Object;
-
 type ContentItemState = {
     item: ?GoldenLayoutItem;
 };
 
 /**
- * ContentItem's React props
+ * React properties for the {@link ContentItem} component.
  */
 export type ContentItemProps = {
     type: string;
@@ -51,7 +50,10 @@ export type ContentItemProps = {
 /**
  * Create a new GoldenLayout ContentItem.
  *
- * Note: You probably don't want to use this class directly.
+ * Note: You probably don't want to use this class directly, see:
+ * * {@link Row}
+ * * {@link Column}
+ * * {@link Stack}
  */
 export default class ContentItem extends React.Component<ContentItemProps, ContentItemState> {
     id : string;

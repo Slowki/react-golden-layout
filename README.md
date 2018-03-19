@@ -24,11 +24,17 @@ new webpack.ProvidePlugin({
 -   [Column](#column)
 -   [ContentItemProps](#contentitemprops)
 -   [ContentItem](#contentitem)
+-   [createGoldenLayoutComponent](#creategoldenlayoutcomponent)
 -   [GoldenLayoutComponentProps](#goldenlayoutcomponentprops)
 -   [GoldenLayoutComponent](#goldenlayoutcomponent)
 -   [Row](#row)
 -   [StackProps](#stackprops)
 -   [Stack](#stack)
+-   [GoldenLayoutItem](#goldenlayoutitem)
+-   [GoldenLayoutHeader](#goldenlayoutheader)
+-   [React.PureComponent](#reactpurecomponent)
+-   [React.Component](#reactcomponent)
+-   [GoldenLayout](#goldenlayout)
 
 ### Column
 
@@ -42,15 +48,15 @@ Returns **any**
 
 ### ContentItemProps
 
-ContentItem's React props
+React properties for the [ContentItem](#contentitem) component.
 
-Type: {type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String), children: ChildrenArray&lt;any>, itemRef: function (GoldenLayoutItem): any?}
+Type: {type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String), children: ChildrenArray&lt;any>, itemRef: function ([GoldenLayoutItem](#goldenlayoutitem)): any?}
 
 **Properties**
 
 -   `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `children` **ChildrenArray&lt;any>** 
--   `itemRef` **function (GoldenLayoutItem): any?** 
+-   `itemRef` **function ([GoldenLayoutItem](#goldenlayoutitem)): any?** 
 
 ### ContentItem
 
@@ -58,23 +64,38 @@ Type: {type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Referenc
 
 Create a new GoldenLayout ContentItem.
 
-Note: You probably don't want to use this class directly.
+Note: You probably don't want to use this class directly, see:
+
+-   [Row](#row)
+-   [Column](#column)
+-   [Stack](#stack)
 
 **Parameters**
 
 -   `props` **[ContentItemProps](#contentitemprops)** 
 
+### createGoldenLayoutComponent
+
+Convert a React Component's constructor to a GoldenLayout React Component.
+
+**Parameters**
+
+-   `Component` **ComponentBuilder** The constructor for the React Component
+-   `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** See [GoldenLayout's Documentation](https://golden-layout.com/docs/ItemConfig.html)
+
+Returns **GLReactItem&lt;ComponentBuilder>** 
+
 ### GoldenLayoutComponentProps
 
-GoldenLayoutComponent's React props
+React properties for the [GoldenLayoutComponent](#goldenlayoutcomponent) component.
 
-Type: {children: ChildrenArray&lt;any>, className: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?, goldenLayoutRef: function (GoldenLayout): any?}
+Type: {children: ChildrenArray&lt;any>, className: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?, goldenLayoutRef: function ([GoldenLayout](#goldenlayout)): any?}
 
 **Properties**
 
 -   `children` **ChildrenArray&lt;any>** 
 -   `className` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
--   `goldenLayoutRef` **function (GoldenLayout): any?** 
+-   `goldenLayoutRef` **function ([GoldenLayout](#goldenlayout)): any?** 
 
 ### GoldenLayoutComponent
 
@@ -89,12 +110,23 @@ Create a GoldenLayout instance
 **Examples**
 
 ```javascript
-<GoldenLayout className="golden-layout-holder">
+import 'golden-layout/src/css/goldenlayout-base.css';
+import 'golden-layout/src/css/goldenlayout-dark-theme.css';
+import GoldenLayout, { Row, Stack, createGoldenLayoutComponent } from 'react-golden-layout';
+...
+<GoldenLayout>
     <Row>
         <Stack>
-            {createGoldenLayoutComponent(Foo, { isClosable: false })}
+            {
+              // To apply properties to a React component, use createGoldenLayoutComponent
+            }
+            {createGoldenLayoutComponent(Foo, { isClosable: false, title: "Foo's Title" })}
         </Stack>
         <Stack>
+            {
+              // If you don't want any special settings you can just pass
+              // React components directly.
+            }
             {Bar}
         </Stack>
     </Row>
@@ -113,15 +145,15 @@ Returns **any**
 
 ### StackProps
 
-Properties for the `Stack` element
+React properties for the [Stack](#stack) component.
 
-Type: {children: ChildrenArray&lt;any>, itemRef: function ([Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)): any?, headerRef: function ([Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)): any?, headerPosition: (`false` \| `"top"` \| `"left"` \| `"right"` \| `"bottom"`)?, showPopoutIcon: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?, showMaximiseIcon: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?, showCloseIcon: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?}
+Type: {children: ChildrenArray&lt;any>, itemRef: function ([GoldenLayoutItem](#goldenlayoutitem)): any?, headerRef: function ([GoldenLayoutHeader](#goldenlayoutheader)): any?, headerPosition: (`false` \| `"top"` \| `"left"` \| `"right"` \| `"bottom"`)?, showPopoutIcon: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?, showMaximiseIcon: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?, showCloseIcon: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?}
 
 **Properties**
 
 -   `children` **ChildrenArray&lt;any>** 
--   `itemRef` **function ([Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)): any?** 
--   `headerRef` **function ([Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)): any?** 
+-   `itemRef` **function ([GoldenLayoutItem](#goldenlayoutitem)): any?** 
+-   `headerRef` **function ([GoldenLayoutHeader](#goldenlayoutheader)): any?** 
 -   `headerPosition` **(`false` \| `"top"` \| `"left"` \| `"right"` \| `"bottom"`)?** 
 -   `showPopoutIcon` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
 -   `showMaximiseIcon` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
@@ -136,6 +168,30 @@ Create a new Stack
 -   `props` **[StackProps](#stackprops)** 
 
 Returns **any** 
+
+### GoldenLayoutItem
+
+A GoldenLayout Item, see [GoldenLayout's documentation](http://golden-layout.com/docs/Item.html).
+
+Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)
+
+### GoldenLayoutHeader
+
+A GoldenLayout Header object, see [GoldenLayout's documentation](http://golden-layout.com/docs/Header.html).
+
+Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)
+
+### React.PureComponent
+
+A [React component](https://reactjs.org/docs/react-api.html#reactpurecomponent)
+
+### React.Component
+
+A [React component](https://reactjs.org/docs/react-api.html#reactcomponent)
+
+### GoldenLayout
+
+A GoldenLayout instance, see [GoldenLayout's documentation](https://golden-layout.com/docs/GoldenLayout.html).
 
 ## Acknowledgments
 
