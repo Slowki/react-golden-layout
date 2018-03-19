@@ -19,7 +19,7 @@
     "prepublishOnly": "npm run clean && npm run build && documentation build 'src/**' -f html --infer-private -o docs",
     "postinstall": "npm run git:setup",
     "git:validate-commit": "commitlint -x @commitlint/config-conventional",
-    "git:setup": "bash -c \"F='.git/hooks/commit-msg'; if [ ! -e \\$F ]; then echo 'cat \\$1 | npm run git:validate-commit' > \\$F; chmod +x \\$F; fi\""
+    "git:setup": "bash -c \"F='.git/hooks/commit-msg'; if [[ -e .git && ! -e \\$F ]]; then echo 'cat \\$1 | npm run git:validate-commit' > \\$F; chmod +x \\$F; fi\""
   },
   "files": [
     "dist",
