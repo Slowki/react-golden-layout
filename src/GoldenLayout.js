@@ -22,6 +22,8 @@ export type GoldenLayoutComponentProps = {|
 /**
  * Create a GoldenLayout instance
  * @example
+ * import GoldenLayout, { Row, Stack, createGoldenLayoutComponent } from 'react-golden-layout';
+ * ...
  * <GoldenLayout className="golden-layout-holder">
  *     <Row>
  *         <Stack>
