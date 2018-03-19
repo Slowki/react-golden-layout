@@ -15,7 +15,7 @@
     "clean": "rm -rf dist",
     "build": "babel src --out-dir dist",
     "build:watch": "npm run build -- -w",
-    "prepublishOnly": "npm run clean && npm run build && documentation build --infer-private -f md -o DOCS.md",
+    "prepublishOnly": "npm run clean && npm run build && documentation readme 'src/**' --infer-private --document-exported --section=API",
     "postinstall": "npm run git:setup",
     "git:validate-commit": "commitlint -x @commitlint/config-conventional",
     "git:setup": "bash -c \"F='.git/hooks/commit-msg'; if [ ! -e \\$F ]; then echo 'cat \\$1 | npm run git:validate-commit' > \\$F; chmod +x \\$F; fi\""
