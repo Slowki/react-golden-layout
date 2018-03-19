@@ -32,29 +32,44 @@ function createReactContentItem(parentItem : any, component : any) {
     parentItem.addChild(contentItem);
 }
 
-export type ContentItemState = {
-    item: ?any;
+
+export type GoldenLayoutItem = Object;
+
+type ContentItemState = {
+    item: ?GoldenLayoutItem;
 };
 
+/**
+ * ContentItem's React props
+ */
 export type ContentItemProps = {
     type: string;
     children: ChildrenArray<any>;
+    itemRef?: (GoldenLayoutItem) => mixed;
 };
 
 /**
  * Create a new GoldenLayout ContentItem.
  *
- * Note: You probably don't want to use this class directly/
+ * Note: You probably don't want to use this class directly.
  */
 export default class ContentItem extends React.Component<ContentItemProps, ContentItemState> {
     id : string;
 
     constructor(props : ContentItemProps) {
         super(props);
-        this.id = `item-${Math.random()}`; // TODO less stupid ID generation
+        const newBuffer = new Uint8Array(length);
+        window.crypto.getRandomValues(newBuffer);
+        this.id = `item-${btoa(newBuffer)}`; // TODO less stupid ID generation
         this.state = {
             item: null
         };
+    }
+
+    componentWillUnmount() {
+        if (this.state.item != null) {
+            this.state.item.remove();
+        }
     }
 
     render() {
@@ -89,11 +104,7 @@ export default class ContentItem extends React.Component<ContentItemProps, Conte
     }
 
     __addItem(parentItem : any, components : any[]) {
-        if (this.state.item) {
-            console.log('TODO modify existing item', this.state.item);
-             // TODO modify existing item
-            return;
-        } else {
+        if (!this.state.item) {
             const existingItems = parentItem.getItemsById(this.id);
             const newItem = parentItem.layoutManager.createContentItem({
                 type: this.props.type,
@@ -104,6 +115,8 @@ export default class ContentItem extends React.Component<ContentItemProps, Conte
             parentItem.addChild(newItem);
             components.forEach(comp => createReactContentItem(newItem, comp));
             this.setState({ item: newItem });
+            if (this.props.itemRef)
+                this.props.itemRef(newItem);
         }
     }
 };
