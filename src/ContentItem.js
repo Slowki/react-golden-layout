@@ -25,7 +25,7 @@ function createReactContentItem(parentItem : any, component : any) {
     try {
         parentItem.layoutManager.registerComponent(name, reactComponent);
     } catch (e) {
-        console.log(e);
+        // There's a throw if the component is already registered - ignore it.
     }
 
     const contentItem = parentItem.layoutManager.createContentItem(config);
