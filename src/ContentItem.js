@@ -1,7 +1,7 @@
 // @flow
 import Context from './Context';
 import { markAsGLComponent, isGLComponent } from './internal/GLComponentRegistry';
-import type { GoldenLayoutItem } from './types';
+import type { GoldenLayoutItem } from './Types';
 
 import React from 'react';
 import type { ChildrenArray } from 'react';
@@ -60,9 +60,9 @@ export default class ContentItem extends React.Component<ContentItemProps, Conte
 
     constructor(props : ContentItemProps) {
         super(props);
-        const newBuffer = new Uint8Array(length);
+        const newBuffer = new Uint8Array(16);
         window.crypto.getRandomValues(newBuffer);
-        this.id = `item-${btoa(newBuffer)}`; // TODO less stupid ID generation
+        this.id = `item-${btoa(newBuffer.toString())}`; // TODO less stupid ID generation
         this.state = {
             item: null
         };
