@@ -71,7 +71,6 @@ export default class GoldenLayoutComponent extends React.PureComponent<GoldenLay
 
     __gotDiv(div : ?HTMLElement) {
         if (div && !this.state.goldenLayout) {
-            console.log(div);
             const layout = new GoldenLayout({ content: [] }, div);
             layout.init();
             layout.on('initialised', () => {
