@@ -31,24 +31,6 @@
   ],
   "author": "Stephan Wolski",
   "license": "MIT",
-  "release": {
-    "branch": "master",
-    "generateNotes": [],
-    "publish": [
-      "@semantic-release/npm",
-      {
-        "path": "@semantic-release/github",
-        "assets": [
-          {
-            "path": [
-              "dist",
-              "DOCS.md"
-            ]
-          }
-        ]
-      }
-    ]
-  },
   "dependencies": {
     "golden-layout": "^1.5.9",
     "react": "^16.3.0-alpha.2",
