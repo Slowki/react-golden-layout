@@ -1,6 +1,6 @@
 {
   "name": "react-golden-layout",
-  "version": "0.0.1",
+  "version": "1.0.2",
   "description": "A React wrapper around GoldenLayout.",
   "main": "dist/index.js",
   "homepage": "https://github.com/Slowki/react-golden-layout#readme",
