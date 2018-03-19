@@ -1,6 +1,5 @@
 # react-golden-layout #
-
-A React wrapper around GoldenLayout.
+A React wrapper around [GoldenLayout](https://golden-layout.com/).
 
 ## Example ##
 ```javascript
