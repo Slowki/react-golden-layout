@@ -15,11 +15,7 @@
     "clean": "rm -rf dist",
     "test": "flow",
     "build": "babel src --out-dir dist",
-    "build:watch": "npm run build -- -w",
-    "prepublishOnly": "npm run clean && npm run build && documentation build 'src/**' -f html --infer-private -o docs",
-    "postinstall": "npm run git:setup",
-    "git:validate-commit": "commitlint -x @commitlint/config-conventional",
-    "git:setup": "bash -c \"F='.git/hooks/commit-msg'; if [[ -e .git && ! -e \\$F ]]; then echo 'cat \\$1 | npm run git:validate-commit' > \\$F; chmod +x \\$F; fi\""
+    "build:watch": "npm run build -- -w"
   },
   "files": [
     "dist",
@@ -38,12 +34,10 @@
     "react-dom": "^16.3.0-alpha.2"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^6.1.3",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
-    "commitlint": "^6.1.3",
     "documentation": "^6.1.0",
     "flow-bin": "^0.68.0"
   }
