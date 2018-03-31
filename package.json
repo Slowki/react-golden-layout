@@ -30,8 +30,8 @@
   "license": "MIT",
   "dependencies": {
     "golden-layout": "^1.5.9",
-    "react": "^16.3.0-alpha.2",
-    "react-dom": "^16.3.0-alpha.2"
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
