@@ -1,4 +1,6 @@
 # react-golden-layout #
+[![npm](https://img.shields.io/npm/v/react-golden-layout.svg)](https://www.npmjs.com/package/react-golden-layout)
+
 A React wrapper around [GoldenLayout](https://golden-layout.com/).
 
 ## Example ##
