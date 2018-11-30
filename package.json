@@ -15,7 +15,9 @@
     "clean": "rm -rf dist",
     "test": "flow",
     "build": "babel src --out-dir dist",
-    "build:watch": "npm run build -- -w"
+    "build:watch": "npm run build -- -w",
+    "doc": "rm -rf docs && documentation build -g -o docs",
+    "doc:serve": "documentation serve"
   },
   "files": [
     "dist",
@@ -39,7 +41,7 @@
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "documentation": "^6.1.0",
+    "documentation": "^9.0.0-alpha.1",
     "flow-bin": "^0.87.0"
   }
 }
